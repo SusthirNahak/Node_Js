@@ -38,4 +38,4 @@ const htmlContent = `
 // Write HTML content to a file named index.html
 fs.writeFileSync('index.html', htmlContent);
 
-console.log('HTML file generated successfully!');
+//console.log('HTML file generated');
