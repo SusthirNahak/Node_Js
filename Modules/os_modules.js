@@ -1,0 +1,21 @@
+const os = require('os')
+let output =os.homedir();
+console.log(output);
+let output1 =os.arch();
+console.log(output1);
+ let output2 =os.cpus();
+ console.log(output2);
+ let output3 =os.freemem();
+ console.log(output3);
+ let output4 =os.getPriority();
+ console.log(output4);
+ let output5 =os.hostname();
+ console.log(output5);
+ let output6 =os.totalmem();
+ console.log(output6);
+ let output7 =os.version();
+ console.log(output7);
+ let output8 =os.platform();
+ console.log(output8);
+ let output9 =os.machine();
+ console.log(output9);
