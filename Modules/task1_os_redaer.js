@@ -39,3 +39,25 @@ const htmlContent = `
 fs.writeFileSync('index.html', htmlContent);
 
 //console.log('HTML file generated');
+
+
+
+import fs from 'fs';
+
+fs.readFile('data.json', 'utf-8', (err, data) => {
+    if (err) throw err;
+
+    console.log(data);
+    console.log(typeof data);
+
+    let sf_data = JSON.parse(data);
+    console.log(sf_data);
+
+    let emails = sf_data.map(sf => sf.email);
+    console.log(emails);
+
+    fs.writeFile('email.txt', emails.join('\n'), (err) => {
+        if (err) throw err;
+        console.log('Emails saved to email.txt');
+    });
+});
