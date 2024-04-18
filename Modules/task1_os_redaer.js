@@ -1,4 +1,4 @@
-// server.js
+
 const os = require('os');
 const fs = require('fs');
 
@@ -35,7 +35,7 @@ const htmlContent = `
 </html>
 `;
 
-// Write HTML content to a file named index.html
+// Write HTML content to index.html
 fs.writeFileSync('index.html', htmlContent);
 
 //console.log('HTML file generated');
