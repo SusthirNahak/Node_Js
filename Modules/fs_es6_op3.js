@@ -10,16 +10,15 @@ fs.readFile('data.json', 'utf-8', (err, data) => {
     let users = JSON.parse(data);
     console.log(users);
 
-    let Females = users.filter((female)=>{
-        if(female.gender === "Female"){
-            return female.gender
+    let Females = users.filter((user)=>{
+        if(user.gender === "Female"){
+            return user.gender
         }
     })
 
-
     console.log(Females);
-    let femaleNames = Females.map((femalen)=>{
-        return femalen.name
+    let femaleNames = Females.map((female)=>{
+        return female.name
     })
 
     
@@ -27,6 +26,6 @@ fs.readFile('data.json', 'utf-8', (err, data) => {
 
     fs.writeFile('female.txt', femaleNames.join('\n'), (err) => {
         if (err) throw err;
-        console.log('female data saved to male.txt');
+        console.log('female data saved to female.txt');
     });
 });

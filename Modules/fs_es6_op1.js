@@ -24,7 +24,7 @@ fs.readFile('data.json', 'utf-8', (err, data) => {
 
     console.log(data);
     console.log(typeof data);
-
+    //  the datas we are getting in data is string by JSON.parse method we are converting string to js object
     let sf_data = JSON.parse(data);
     console.log(sf_data);
 
